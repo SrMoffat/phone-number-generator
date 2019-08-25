@@ -1,0 +1,25 @@
+{
+  "name": "phone-number-generator",
+  "version": "1.0.0",
+  "description": "A web application that generates random ten-digit phone numbers for a telecommunications company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrMoffat/phone-number-generator.git"
+  },
+  "keywords": [
+    "Random",
+    "phone",
+    "number",
+    "generator"
+  ],
+  "author": "4fr0c0d3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SrMoffat/phone-number-generator/issues"
+  },
+  "homepage": "https://github.com/SrMoffat/phone-number-generator#readme"
+}
