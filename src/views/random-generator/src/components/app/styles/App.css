@@ -1,7 +1,7 @@
 .App-header {
-  background-color: #DCDCDC;
   min-height: 100vh;
   display: grid;
+  grid-template-columns: auto 1fr;
 }
 
 .side-pane {
@@ -31,4 +31,22 @@
   position: absolute;
   top: 4em;
   left: -1.9px;
+}
+
+.dashboard {
+  background-color: #DCDCDC;
+  max-width: 100%;
+  height:  auto;
+  padding: 3em;
+}
+
+.card {
+  background-color: #fff;
+  width: 14em;
+  height: 12em;
+  box-shadow: 0 .3em .6em rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  font-weight: bold;
 }
