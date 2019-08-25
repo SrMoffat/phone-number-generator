@@ -1,15 +1,14 @@
 import React from 'react';
-import logo from '../../assets/images/phone.svg';
+
 import './styles/App.css';
+
+import Nav from '../nav';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Random Number Generator
-        </p>
+        <Nav/>
       </header>
     </div>
   );
