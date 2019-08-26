@@ -18,8 +18,8 @@ const Dashboard = (props) => {
             </div>
             <div className="operations">
                 <Generator/>
-                <Numbers /> 
-                <Paginator />        
+                <Numbers/> 
+                <Paginator/>        
             </div>
         </div>
     )

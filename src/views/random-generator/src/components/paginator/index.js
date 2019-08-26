@@ -2,7 +2,7 @@ import React from 'react';
 
 const Paginator = () => {
     return (
-        <div>Paginator</div>
+        <div className="paginator">Paginator</div>
     )
 }
 
