@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NumberInput from '../input';
-import Button from '../button';
 
 const Generator = () => {
     return (
