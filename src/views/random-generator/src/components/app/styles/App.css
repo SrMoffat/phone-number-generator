@@ -38,10 +38,17 @@
   max-width: 100%;
   height:  auto;
   padding: 5em;
+}
+
+.stats {
   display: grid;
-  grid-template-columns: 250px 250px 250px 550px;
-  grid-gap: 2em;
-  
+  grid-template-columns: repeat(4, 19em);
+  margin-bottom: 2em;
+
+}
+
+.operations {
+
 }
 
 .card {
@@ -74,6 +81,8 @@
 
 .custom-select {
   display: block;
+  align-self: end;
+  justify-self: end;
   font-size: 1em;
   outline: none;
   user-select: none;
@@ -123,4 +132,9 @@
 }
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
 	border-color: #aaa;
+}
+
+.generator {
+  background-color: red;
+  padding: 5em;
 }
