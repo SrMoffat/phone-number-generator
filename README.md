@@ -1,6 +1,9 @@
 # phone-number-generator
 A web application that generates random unique ten-digit phone numbers starting with zero  
 
+## Application Dashboard
+![alt App Dashboard](https://user-images.githubusercontent.com/31407254/63695396-48a8aa80-c821-11e9-9f98-83d38ea00ec4.png "App Dashboard")
+
 
 ## Functionality
 - [] Generate random numbers
