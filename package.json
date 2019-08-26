@@ -4,7 +4,8 @@
   "description": "A web application that generates random ten-digit phone numbers for a telecommunications company.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start:dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/SrMoffat/phone-number-generator/issues"
   },
-  "homepage": "https://github.com/SrMoffat/phone-number-generator#readme"
+  "homepage": "https://github.com/SrMoffat/phone-number-generator#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  }
 }
