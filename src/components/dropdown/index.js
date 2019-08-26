@@ -7,11 +7,11 @@ const Dropdown = (props) => {
         <select className="custom-select">        
         <option value="" selected disabled>𝔰𝔬𝔯𝔱 𝔟𝔶</option>
             {
-                // options.map((option, index) => {
-                //     return (
-                //         <option value={option} key={index}>{option}</option>
-                //     );
-                // })
+                options.map((option, index) => {
+                    return (
+                        <option value={option} key={index}>{option}</option>
+                    );
+                })
             }
         </select>
     )

@@ -11,9 +11,11 @@ const Dashboard = (props) => {
     return (
         <div className="dashboard">
             <div className="stats">
-                {/* {
-                cards.map((card, index) => (<Card { ...card } key={index}/>))
-                } */}
+                { cards.map(
+                    (card, index) => (
+                        <Card { ...card } key={index}/>)
+                    ) 
+                }
                 <Dropdown options={options}/>            
             </div>
             <div className="operations">
