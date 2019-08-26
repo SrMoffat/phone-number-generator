@@ -1,9 +1,14 @@
 import React from 'react';
 
 const Button = (props) => {
-    const { text } = props;
+    const { text, disabled, onClick } = props;
     return (
-        <button className="generate-button">{text}</button>
+        <button
+            className="generate-button"
+            disabled={disabled}
+            onClick={onClick}
+        > {text} 
+        </button>
     );
 }
 

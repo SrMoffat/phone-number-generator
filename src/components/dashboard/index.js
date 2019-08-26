@@ -7,7 +7,7 @@ import Numbers from '../table';
 import Paginator from '../paginator';
 
 const Dashboard = (props) => {
-    const { cards, options } = props;
+    const { cards, options, randomNumberChange, randomNumberGenerate, numbers } = props;
     return (
         <div className="dashboard">
             <div className="stats">
@@ -17,8 +17,8 @@ const Dashboard = (props) => {
                 <Dropdown options={options}/>            
             </div>
             <div className="operations">
-                <Generator/>
-                <Numbers/> 
+                <Generator handleChange={randomNumberChange} handleClick={randomNumberGenerate}/>
+                <Numbers numbers={numbers}/> 
                 <Paginator/>        
             </div>
         </div>

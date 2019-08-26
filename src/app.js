@@ -2,23 +2,16 @@ import React, { Component } from 'react';
 
 import './App.css';
 
-import avatar from '../src/assets/images/avatar.jpg';
-import logout from '../src/assets/images/logout.svg';
 import min from '../src/assets/images/min.svg';
 import max from '../src/assets/images/max.svg';
-import next from '../src/assets/images/next.svg';
-import previous from '../src/assets/images/previous.svg';
 import numbers from '../src/assets/images/numbers.svg';
 
-import Row from './Row';
 import Nav from '../src/components/nav';
 import Dashboard from '../src/components/dashboard';
 
-
-
 import phoneNumberGenerator from './utils/randomNumberGenerator';
 
-export default class App extends Component {
+class App extends Component {
   state = {
     amount: null,
     numbers: [],
@@ -65,9 +58,11 @@ export default class App extends Component {
     const numbers = phoneNumberGenerator(amount);
     this.setState({ numbers });
     localStorage.setItem('numbers', JSON.stringify(numbers));
+    // successToast(`Numbers successfully generated`);
   }
 
   handleChange = e => {
+    console.log(e.target.value)
     this.setState({ amount: e.target.value });
   }
 
@@ -85,39 +80,39 @@ export default class App extends Component {
     }
   }
 
-renderSidePane = () => (
-      <div className="side-pane">
-      <span>
-          <img 
-              src={''}
-              className="side-pane-avatar"
-              alt={''}
-              >
-          </img>
-      </span>
-      <span className="logo">
-      𝔫𝔲𝔪𝔟𝔢𝔯𝔰
-      </span>
-      <span>
-          <img 
-              src={''}
-              className="side-pane-logout"
-              alt={''}
-              >
-          </img>
-      </span>
-    </div>
+  renderSidePane = () => (
+        <div className="side-pane">
+        <span>
+            <img 
+                src={''}
+                className="side-pane-avatar"
+                alt={''}
+                >
+            </img>
+        </span>
+        <span className="logo">
+        𝔫𝔲𝔪𝔟𝔢𝔯𝔰
+        </span>
+        <span>
+            <img 
+                src={''}
+                className="side-pane-logout"
+                alt={''}
+                >
+            </img>
+        </span>
+      </div>
   )
 
   renderSideNavIcon = () => (
-      <span className="side-pane-icons">
-        <img 
-            className={`side-pane-${''}`}
-            src={''} 
-            alt={''}               
-            >
-        </img>
-      </span>
+        <span className="side-pane-icons">
+          <img 
+              className={`side-pane-${''}`}
+              src={''} 
+              alt={''}               
+              >
+          </img>
+        </span>
   )
 
   render() {
@@ -127,12 +122,21 @@ renderSidePane = () => (
     return (
       <div className="App-header">
         <Nav />
-        <Dashboard cards={this.cards} options={this.dropdownOptions}/>
-      { this.renderSidePane() }
-     
-        
-        
+        <Dashboard
+          cards={this.cards}
+          numbers={numbers}
+          options={this.dropdownOptions}
+          randomNumberChange={this.handleChange}
+          randomNumberGenerate={this.generateNumbers}
+        />
+        {
+              /* istanbul ignore next */
+          disable && amount !== null && <div className="error">Amount must be between 1 - 10000</div>
+        }
+        { this.renderSidePane() }        
       </div>
     );
   }
 }
+
+export default App;
