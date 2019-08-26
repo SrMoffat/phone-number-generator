@@ -6,7 +6,7 @@ const Card = (props) => {
         <div className="card">
             <div className="">
                 <img 
-                    className={`card-${icon}`}
+                    className="card-icon"
                     src={icon} 
                     alt={icon}               
                     >
@@ -18,7 +18,7 @@ const Card = (props) => {
                 </p>
             </div>
             <div className="">
-                <p className="card-header">
+                <p className="card-text">
                     { text }
                 </p>
             </div>
