@@ -9,6 +9,7 @@ import max from '../../assets/images/max.svg';
 import Nav from '../nav';
 import Dahsboard from '../dashboard';
 import Card from '../card';
+import Dropdown from '../dropdown';
 
 const cards = [
     {
@@ -28,6 +29,11 @@ const cards = [
     }
 ]
 
+const dropdownOptions = [
+   'Ascending',
+   'Descending'
+]
+
 const App = () => {
   return (
     <div className="App">
@@ -37,6 +43,7 @@ const App = () => {
            {
                cards.map((card, index) => (<Card { ...card } key={index}/>))
            }
+           <Dropdown options={dropdownOptions}/>
         </Dahsboard>
       </header>
     </div>
