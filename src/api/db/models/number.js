@@ -13,6 +13,16 @@ const NumberSchema = new mongoose.Schema({
     }
 });
 
+NumberSchema.statics.getRecentlyGenerated = async function () {
+    let generatedPhoneNumbers = await this.find({ recentlyGenerated: true });
+
+    if(!generatedPhoneNumbers){
+        generatedPhoneNumbers = []
+    }
+
+    return generatedPhoneNumbers;
+}
+
 const PhoneNumber = mongoose.model('Number', NumberSchema);
 
 module.exports = PhoneNumber;
