@@ -4,8 +4,6 @@
   grid-template-columns: auto 1fr;
 }
 
-
-
 .side-pane {
   background-color: #000;
   width: 4em;
@@ -34,6 +32,10 @@
   top: 4em;
   left: -1.9px;
 }
+
+
+
+/* 
 
 .dashboard {
   background-color: #DCDCDC;
@@ -262,4 +264,4 @@ input[type=number]:focus {
   font-size: 12px;
   margin-top: -10px;
   margin-bottom: 10px;
-}
+} */
