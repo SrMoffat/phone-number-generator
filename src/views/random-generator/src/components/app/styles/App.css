@@ -141,8 +141,27 @@
 .generator {
   background-color: #fff;
   box-shadow: 0 .3em .6em rgba(0, 0, 0, 0.2);
-  padding: 5em;
   max-height: 400px;
+  display: grid;
+  grid-template-rows: 30px 50px 1fr;
+  grid-gap: 1em;
+  transition: all .3s;
+  padding: 4em;
+}
+
+.generator label {
+  font-size: 1em;
+  font-weight: bold;
+  align-self: end;
+}
+
+input[type=number]:focus {
+  background-color: rgb(235, 188, 0);
+  outline: none;
+  color:#fff;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all .4s;
 }
 
 .table {
@@ -164,11 +183,15 @@
   background-color: #fff;
 }
 
+.row:hover:not(:first-child){
+  background-color: rgba(165, 165, 165, .1);
+}
+
 .column-label {
   position: sticky;
   top: 0;
   height: 3em;
-  background-color:rgb(238, 238, 238);
+  background-color:rgb(250, 249, 249);
 }
 
 .id-label {
@@ -184,4 +207,28 @@
 .paginator {
   grid-column-start: 2;
   justify-self: end;
+}
+
+.generate-button {
+  background-color: #000;
+  font-weight: bold;
+  color: rgb(235, 188, 0);
+  text-transform: uppercase;
+  height: 4em;
+  padding: 10px 40px;
+  border-radius: 100px;
+  outline: none;
+  cursor: pointer;
+  justify-self: center;
+  align-self: center;
+  transition: all .3s;
+}
+
+.generate-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+.generate-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.4);
 }
