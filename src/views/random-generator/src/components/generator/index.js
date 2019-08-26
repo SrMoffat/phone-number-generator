@@ -6,8 +6,12 @@ import Button from '../button';
 const Generator = () => {
     return (
         <div className="generator">
-            <NumberInput type="number" label="Numbers to Generate"/>
-            <Button text="Generate Numbers"/>
+            <NumberInput 
+                type="number"
+                label="Numbers to Generate"
+                min='0'
+                max='10000'
+            />
         </div>
     )
 }
