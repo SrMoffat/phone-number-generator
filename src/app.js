@@ -17,7 +17,6 @@ const App = () => {
     const numbers = JSON.parse(localStorage.getItem('numbers'));
     
     if(numbers && numbers.length > 0) { setResults(numbers); }
-
   }, [results]);
 
     return (
