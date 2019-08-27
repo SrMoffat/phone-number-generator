@@ -2,6 +2,7 @@
   "name": "numbers",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://srmoffat.github.io/phone-number-generator",
   "dependencies": {
     "coveralls": "^3.0.4",
     "enzyme": "^3.10.0",
