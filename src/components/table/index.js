@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { renderNumbers } from '../../utils/componentBuilder';
+
 const Table = (props) => {
     const { numbers } = props;
 
@@ -10,12 +12,7 @@ const Table = (props) => {
                 <span className="number-label">Number</span>
             </div>
             {
-                numbers.map((number, index) => (
-                   <div className="row" key={index} >
-                        <div className="">{index}</div>
-                        <div className="">{number}</div>
-                   </div>
-                ))
+                renderNumbers(numbers)                
             }
         </div>
     );
