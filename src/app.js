@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './App.css';
 
 import { renderSideNav, getCards, getSortType } from './utils/componentBuilder';
+
+
 import Dashboard from './components/dashboard';
 
 const App = () => {
   const cards = getCards();
   const sortTypes = getSortType();
 
-  const numbers = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    const numbers = JSON.parse(localStorage.getItem('numbers'));
+    
+    if(numbers && numbers.length > 0) { setResults(numbers); }
+
+    console.log('N', numbers);
+  }, []);
+
+  console.log('R', results)
+
 
 
     return (
@@ -18,7 +31,7 @@ const App = () => {
         <Dashboard 
           cards={cards}
           options={sortTypes}
-          numbers={numbers}
+          numbers={results}
         />
   
 
