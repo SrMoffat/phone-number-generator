@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 
 import { renderSideNav, getCards, getSortType } from './utils/componentBuilder';
 import Dashboard from './components/dashboard';
 
-export default class App extends Component {
-  cards = getCards();
-  sortTypes = getSortType();
+const App = () => {
+  const cards = getCards();
+  const sortTypes = getSortType();
 
-  render() {
-    console.log(this.cards);
+  const [numbers, setNumbers] = useState();
 
     return (
       <div className="App-header">
         { renderSideNav() }
         <Dashboard 
-          cards={this.cards}
-          options={this.sortTypes}
+          cards={cards}
+          options={sortTypes}
         />
   
 
           
       </div>
     );
-  }
 }
+
+export default App;
