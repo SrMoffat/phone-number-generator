@@ -136,38 +136,6 @@
 	border-color: #aaa;
 }
 
-
-
-/* 
-
-
-
-.generator {
-  background-color: #fff;
-  box-shadow: 0 .3em .6em rgba(0, 0, 0, 0.2);
-  max-height: 400px;
-  display: grid;
-  grid-template-rows: 30px 50px 1fr;
-  grid-gap: 1em;
-  transition: all .3s;
-  padding: 4em;
-}
-
-.generator label {
-  font-size: 1em;
-  font-weight: bold;
-  align-self: end;
-}
-
-input[type=number]:focus {
-  background-color: rgb(235, 188, 0);
-  outline: none;
-  color:#fff;
-  font-size: 1em;
-  font-weight: bold;
-  transition: all .4s;
-}
-
 .table {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -202,19 +170,21 @@ input[type=number]:focus {
   font-weight: bold;
 }
 
-.number-label {
-  align-self: center;
-  font-weight: bold;
+.generator {
+  background-color: #fff;
+  box-shadow: 0 .3em .6em rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+  display: grid;
+  grid-template-rows: 30px 50px 1fr;
+  grid-gap: 1em;
+  transition: all .3s;
+  padding: 4em;
 }
 
-.paginator {
-  grid-column-start: 2;
-  justify-self: end;
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 1em;
-  background-color: #fff;
-  padding: .2em;
+.generator label {
+  font-size: 1em;
+  font-weight: bold;
+  align-self: end;
 }
 
 .generate-button {
@@ -247,6 +217,32 @@ input[type=number]:focus {
   grid-gap: 1em;
 }
 
+input[type=number]:focus {
+  background-color: rgb(235, 188, 0);
+  outline: none;
+  color:#fff;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all .4s;
+}
+
+.number-label {
+  align-self: center;
+  font-weight: bold;
+}
+
+.paginator {
+  grid-column-start: 2;
+  justify-self: end;
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1em;
+  background-color: #fff;
+  padding: .2em;
+}
+
+
+
 .page-count {
   align-self: center;
 }
@@ -259,10 +255,3 @@ input[type=number]:focus {
 .total-pages {
   font-weight: bold;
 }
-
-.error {
-  color: red;
-  font-size: 12px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-} */

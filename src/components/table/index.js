@@ -10,12 +10,12 @@ const Table = (props) => {
                 <span className="number-label">Number</span>
             </div>
             {
-                // numbers.map((number, index) => (
-                //    <div className="row" key={index} >
-                //         <div className="">{index}</div>
-                //         <div className="">{number}</div>
-                //    </div>
-                // ))
+                numbers.map((number, index) => (
+                   <div className="row" key={index} >
+                        <div className="">{index}</div>
+                        <div className="">{number}</div>
+                   </div>
+                ))
             }
         </div>
     );

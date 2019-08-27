@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './App.css';
 
@@ -9,7 +9,8 @@ const App = () => {
   const cards = getCards();
   const sortTypes = getSortType();
 
-  const [numbers, setNumbers] = useState();
+  const numbers = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+
 
     return (
       <div className="App-header">
@@ -17,6 +18,7 @@ const App = () => {
         <Dashboard 
           cards={cards}
           options={sortTypes}
+          numbers={numbers}
         />
   
 
